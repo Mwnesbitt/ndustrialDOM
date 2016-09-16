@@ -13,11 +13,12 @@ analyst can more easily do his modeling.
 """
 
 def extractData(filename):
+  #takes the Dominion Virginia Power HTML file.  The regex is tailored to the DOM HTML format for this.
   #writes a CSV with 2 columns.  Col1 is dates, col2 is A, B, or C.  
-  #CSV is saved in the same directory as filename with name = filename_output.csv
+  #CSV is saved in the same directory as filename with name = "filename_output.csv"
   f = open(filename,'r')
   data = f.read()
-  #find and print January to a file
+  #Finding and pulling out each row for the files-- the day of the month plus the A/B/C rating.
   tuples= re.findall(r'<td>\s*<div class="day-number">\s*(\d+)\s*.*\s*<div class="rating" style="background-color:#\w\w\w\w\w\w">\s*(\w)\s*',data)
   if not tuples:
     print("couldn't find the regex anywhere in the file")
