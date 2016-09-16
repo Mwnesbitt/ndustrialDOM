@@ -1,0 +1,616 @@
+@charset "utf-8";
+/* 
+	presentation.css 
+	Provides presentation for the dom.com detail style pages.
+
+	:THEME: screen/detail
+	:AUTHOR: James Green
+	:CREATED: June 16, 2008
+	
+	:UPDATED:
+	JG 06/16/2008 - Initial setup.
+	JG 07/24/2008 - Reorganized definitions based on specificity.
+					Combined layout and presentation into one css file to reduce/elminate cascading conflicts.
+	JG 08/20/2008 - Changes to incorporate new shadow images.
+	JG 08/21/2008 - Added style rules for link lists.
+	JG 10/14/2008 - Added definitions for slide show controls.
+	JG 10/16/2008 - Removed tabs & panels definitions.
+					Renamed breadcrumb-divider from gif to png.
+	JG 10/22/2008 - Modified accordion header's clickable area. 
+	JG 10/23/2008 - Font tweaks
+	JG 12/31/2008 - Moved panel-sign-in and panel-register definitions to overview/presentation.css.
+	JG 01/15/2009 - Added width to panel-menu li tags. This fixes line breaking issue in IE6.
+	
+	:NOTES:
+	Version 2.
+*/
+
+.text-field {
+/* Override base definition for detail pages. */
+	width:165px;
+}
+.menu-row {
+	background:url(../base/row-divider.png) repeat-x left top;
+}
+#band-content {
+	margin:0;
+	padding:0 0 20px 0;
+	overflow:hidden; /* Very important for non-IE browsers to see floats cleared inside this container element. */
+	background:url(../base/backgrounds/content.png) repeat-y left -20px;
+	width:982px;
+}
+
+/* Panel specific to Manage Your Account login. */
+#panel-mya {
+	background:url(../base/forms/secured-sign-in-bg.png) repeat-x bottom left;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	position:relative;
+	top:0;
+	margin:0;
+	padding:0 0 20px;
+	overflow:hidden;
+	width:952px;
+	left:10px;
+}
+
+#band-breadcrumb-navigation {
+	height:48px;
+	margin:0;
+	padding:0;
+	background:url(../base/backgrounds/breadcrumb.jpg) no-repeat top left;
+}
+#band-breadcrumb-navigation ul {
+	list-style:none;
+	margin:0 0 0 30px;
+	padding:8px 0 0 0;
+}
+#band-breadcrumb-navigation li {
+	background:url(breadcrumb-divider.png) no-repeat right 5px;
+	float:left;
+	padding:0 10px 0 0;
+	margin:0 5px 0 0;
+	font-size:.8em;
+}
+
+#panel-menu {
+	position:relative;
+	margin:0;
+	padding:0;
+	width:251px;
+	float:left;
+	z-index:1;
+	overflow:visible;
+	left:-4px;
+	background:url(menu-bg2.png) no-repeat top left #f0edeb;
+}
+#panel-menu dl {
+	list-style:none;
+	font-size:.9em;
+	font-weight:bold;
+	color:#333; 
+	width:240px;
+	margin:20px -18px 0 0;
+	padding:0 0 20px 18px;
+	background:url(menu-footer-bg2.png) no-repeat 0 bottom;
+}
+#panel-menu dt {
+	padding:0;
+	margin:0 25px 0 0;
+}
+#panel-menu dt a.closed {
+	background:url(menu-close.png) 0 13px no-repeat;
+	padding-left:15px;
+}
+#panel-menu dt a.opened {
+	background:url(menu-open.png) 0 13px no-repeat;
+	padding-left:15px;
+}
+#panel-menu dd {
+	font-weight:normal;
+	margin:0;
+	padding:0;
+}
+#panel-menu ul {
+	background:url(../base/row-divider.png) repeat-x left top;
+}
+#panel-menu a {
+	color:#333; 
+	display:block;
+	padding:10px 0;
+}
+#panel-menu dl ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+	width:215px;
+}
+#panel-menu dl li {
+	margin:0;
+	padding:0;
+	width:100%;
+}
+#panel-menu dl li a {
+	display:block;
+	margin:0;
+	padding:10px;
+}
+#panel-menu a:visited {
+	text-decoration:none;
+}
+#panel-menu a:hover {
+	text-decoration:none;
+}
+#panel-menu a.active {
+	background-color:#D5D7E9;
+}
+#panel-menu dd.closed {
+	display:none;
+}
+
+#panel-feature-promotions .carousel-navigation {
+	margin:0;
+	padding:0 5px;
+}
+
+#panel-feature {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:1em;
+	background-color:white;	
+	position:relative;
+	top:0;
+	left:17px;
+	padding:0;
+	margin:0 0 40px 0;
+	width:676px;
+	float:left;
+}
+
+#panel-feature h1 {
+	font-size:1.6em;
+	font-weight:normal;
+	color:#816f59;
+	margin:0 0 10px 0;
+	padding:0;
+}
+#panel-feature h2 {
+	font-size:1em;
+	font-weight:bold;
+	color:#816f59;
+	margin:10px 5px 10px 0;
+	padding:0;
+}
+#panel-feature p {
+	font-size:.95em;
+	line-height:125%;
+	margin:10px 20px 10px 0;
+	padding:0;
+}
+#panel-feature dl {
+	font-size:.9em;
+	font-weight:bold;
+	color:#333; 
+	margin:5px 15px;
+	padding:10px 0;
+	zoom:1; /* IE. Set hasLayout */
+}
+#panel-feature dt {
+	background:url(../base/bullet-dl.png) no-repeat left center;
+	margin:0;
+	padding:0 0 0 15px;
+}
+#panel-feature dd {
+	font-weight:normal;
+	margin:5px 0 10px 15px;
+}
+#panel-feature ul.address {
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+#panel-feature ul.address li {
+	padding:0 0 2px 0;
+	margin:0;
+}
+#panel-feature ul {
+	padding:0;
+	margin:0 0 0 35px;
+}
+#panel-feature li {
+	padding:0 0 10px 0;
+	margin:0;
+}
+#panel-feature div.link-list {
+	background-color:#F0EDEB;
+	border:1px solid #BBB7B3;
+	padding:0 10px;
+	margin:10px;
+	float:right;
+	display:inline;
+	width:250px;
+}
+#panel-feature div.link-list ul {
+	margin:0 0 10px;
+	padding:0;
+}
+#panel-feature div.link-list li {
+	list-style:none;
+	margin:0;
+	padding:5px 0;
+	background:url(../base/row-divider.png) repeat-x left bottom;
+	overflow:hidden;
+	zoom:1;
+}
+
+#panel-feature .promotion {
+	background:url(promotions-bg-bottom.png) no-repeat bottom left;
+	padding:0 0 9px 7px;
+	margin:10px 0 0 0;
+	width:212px;
+	float:left;
+}
+#panel-feature .promotion img {
+	margin:0 0 0 -8px;
+	padding:0;
+}
+#panel-feature .promotion h3 {
+	background:url(promotions-bg-top.png) no-repeat top left;
+	margin:0 0 0 -7px;
+	padding:10px 0 10px 15px;
+	font-size:1em;
+	font-weight:bold;
+	color:#816f59;
+}
+#panel-feature .promotion form {
+	margin:-6px 0 11px 8px;
+	padding:0;
+}
+#panel-feature .promotion label {
+	font-weight:bold;
+	font-size:.75em;
+	display:block;
+	margin:10px 0 3px 0;
+}
+#panel-feature .promotion p {
+	margin:3px 0 0 8px;
+	padding:0;
+}
+#panel-sign-in .field a {
+	font-size:75%;
+}
+#panel-feature .promotion.gutter {
+	margin-left:5px;
+}
+#panel-feature .promotion p.more {
+	background-color:#FFFFFF;
+	margin:8px 5px -1px -3px;
+	padding:3px 8px;
+}
+#panel-sign-in #mya-footer {
+	position:relative;
+	left:-5px;
+	margin:10px 0 0 0;
+	padding:0;
+	display:block;
+}
+
+#panel-feature p.caption {
+	font-size:60%;
+}
+
+#panel-feature div.callout {
+	background-color:#FFFFFF;
+	background:url(callout-bg-top.png) no-repeat top left;
+	font-size:1em;
+	margin:10px 0 0 0;
+	padding:7px 10px 10px 10px;
+	width:675px;
+}
+#panel-feature div.callout img {
+	margin:0;
+	padding:0;
+}
+#panel-feature div.callout div.inner {
+	margin:0 0 0 -10px;
+	padding:5px 15px 15px 15px;
+	background:url(callout-bg-bottom2.png) no-repeat bottom left;
+}
+#panel-feature div.callout div.inner h2 {
+	margin:5px 0;
+	padding:0;
+}
+#panel-feature div.callout div.inner li {
+	margin:0;
+	padding:0;
+}
+#panel-feature div.callout div.inner a {
+	margin:0;
+	padding:0;
+}
+#panel-feature div.callout div.inner dl {
+	margin:5px 0 20px 0;
+	padding:0;
+}
+#panel-feature div.callout div.inner dt {
+	background:none;
+	width:100%;
+	margin:15px 0 0 0;
+	padding:0;
+}
+#panel-feature div.callout div.inner dd {
+	margin:0 0 10px 0;
+	padding:0;
+}
+#panel-feature div.callout div.inner p {
+	padding:0;
+}
+#panel-feature div.callout div.inner p.fine-print {
+	margin-top:0;
+	padding-top:0;
+	font-size:.6em;
+	color:#999;
+}
+#panel-feature div.callout div.inner ul.contact-list {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#panel-feature div.callout div.inner ul.contact-list ul {
+	margin:0;
+	padding:0;
+}
+#panel-feature div.callout div.inner ul.contact-list ul li {
+	margin:0;
+	padding:0 10px 0 0;
+	display:inline;
+}
+
+#panel-feature #panel-columns {
+	zoom:1;
+	height:1%;
+	overflow:hidden;
+	min-height: 1%;
+}
+#panel-feature #panel-columns ul {
+	list-style:none;
+	font-size:75%;
+	margin:0 10px 20px 0;
+	padding:0;
+	float:left;
+	width:30%;
+}
+#panel-feature #landing-feature {
+	background:url(landing-feature-background.png) no-repeat top left;
+	position:relative;
+	width:649px;
+	height:321px;
+	margin:0;
+	padding:20px 0 0 30px;	
+}
+#panel-feature #landing-feature a {
+	margin:0 10px 0 0;
+	padding:0;
+}
+#panel-feature #landing-feature p {
+	font-size:.7em;
+	color:#333;
+	line-height:160%;
+	margin:0 0 10px 0;
+	padding:0;
+	width:210px;
+}
+#panel-feature #landing-feature em {
+	font-size:115%;
+	font-style:normal;
+	font-weight:bold;
+	line-height:160%;
+	margin:0;
+	padding:0;
+}
+#panel-feature #landing-feature ul {
+	font-size:.7em;
+	line-height:100%;
+}
+#panel-feature #landing-feature img.feature {
+	position:absolute;
+	top:8px;
+	left:252px;
+	float:right;
+}
+#panel-feature #landing-feature form {
+	margin:0;
+	padding:0;
+	width:210px;
+}
+#panel-feature #landing-feature ul {
+	margin:0 0 10px 25px;
+	padding:0;
+}
+#panel-feature #landing-feature li {
+	margin:0;
+	padding:0;
+	width:212px;
+}
+#panel-feature #landing-feature form input {
+	float:left;
+}
+#panel-feature #landing-feature form span {
+	font-size:85%;
+	font-weight:bold;
+	padding:10px 0 0 5px;
+}
+#panel-feature #panel-columns ul ul {
+	margin:10px 0 0 10px;
+	padding:0;
+	width:100%;
+}
+#panel-feature #panel-columns ul li {
+	margin:0 0 10px 0;
+	padding:0;
+}
+#panel-feature #panel-columns ul ul {
+	list-style:none;
+	font-size:100%;
+}
+#panel-feature #panel-columns:after{
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+#panel-feature #landing-feature p.stock-symbol {
+	font-weight:bold;
+	font-size:1em;
+	color:#816f59;
+	margin:20px 0 10px 0;
+	padding:0;
+}
+#panel-feature #landing-feature.stock h2 {
+	background:url(stock-quote-header.png) no-repeat top left;
+	text-indent:-9999px;
+	width:176px;
+	height:35px;
+	margin:0;
+	padding:0;
+}
+#panel-feature #landing-feature.stock ul {
+	font-size:.7em;
+	list-style:none;
+	margin:0;
+	padding:0;
+	width:210px;
+}
+#panel-feature #landing-feature.stock li {
+	background:url(../base/row-divider.png) repeat-x bottom left;
+	margin:0;
+	padding:8px 0;
+}
+#panel-feature #landing-feature.careers h2 {
+	background:url(careers-header.png) no-repeat top left;
+	text-indent:-9999px;
+	width:212px;
+	height:39px;
+	margin:0;
+	padding:0;
+}
+#panel-feature #landing-feature.customer-service h2 {
+	background:url(customer-service-header.png) no-repeat top left;
+	text-indent:-9999px;
+	width:210px;
+	height:33px;
+	margin:0 0 10px 0;
+	padding:0;
+}
+
+#panel-feature #panel-tabbed-features #panel-tabbed-overview {
+	font-size:.85em;
+	position:absolute;
+	top:20px;
+	left:20px;
+	overflow:visible;
+	width:300px;
+}
+
+#panel-feature #panel-tabbed-features img#feature-media {
+	position:relative;
+	margin:8px 0 0 8px;
+	padding:0;
+}
+#panel-feature #panel-tabbed-features img#feature-media-bg {
+	position:relative;
+	margin:8px 0 0 8px;
+	padding:0;
+	z-index:-10;
+}
+#panel-feature #panel-tabbed-features img#feature-media-video {
+	position:absolute;
+	top:35px;
+	right:20px;
+	padding:0;
+}
+#panel-feature #panel-tabbed-features img#header {
+
+}
+#ss-main-feature-controls {
+	position:absolute;
+	bottom:10px;
+	right:30px;
+	z-index:100;
+}
+#ss-main-feature-controls img {
+	margin:0;
+	padding:0;
+	cursor:pointer;
+}
+#ss-play { 
+	position:absolute;
+	left:36px;
+	visibility:hidden;
+}
+
+#panel-feature .content-group {
+	overflow:hidden;
+	clear:both;
+	zoom:1;
+}
+#panel-feature .content-group .panel {
+	float:left;
+	width:223px;
+	background:url(../../../themes/screen/detail/panel-bg-top.png) top left no-repeat;
+	padding:0;
+	margin:0;
+}
+#panel-feature .content-group .panel .inner {
+	background:url(../../../themes/screen/detail/panel-bg-bottom.png) bottom left no-repeat;
+	margin:8px 0;
+	zoom:1; /*IE6 hack. Lists disappeared until hovered in IE6. */
+	padding:0 0 15px 0;
+}
+#panel-feature .content-group .panel h2 {
+	margin:0;
+	padding:5px 5px 10px 15px;
+}
+#panel-feature .content-group .panel img {
+	border-bottom:#fff 1px solid;
+	border-top:#fff 1px solid;
+	margin:0 0 10px -8px;
+}
+#panel-feature .content-group .panel p {
+	line-height:100%;
+	padding:0 0 0 8px;
+	margin:0 8px;
+}
+#panel-feature .content-group .panel a {
+	font-size:.9em;
+	margin:5px 0;
+	padding:5px 0;
+}
+#panel-feature .content-group .panel p a {
+	display:block;
+	background:url(../../../themes/screen/base/row-divider.png) repeat-x left bottom;
+	padding:0 0 10px;
+	margin-right:8px;
+}
+#panel-feature .content-group .panel ul {
+	list-style:none;
+	margin:-5px 16px 0;
+	padding:0;
+}
+#panel-feature .content-group .panel li {
+	margin:0;
+	padding:5px 0;
+	background:url(../../../themes/screen/base/row-divider.png) repeat-x left bottom;
+}
+#panel-feature .content-group .panel li.no-divider,
+#panel-feature .content-group .panel p a.no-divider {
+	background:none;
+}
+#panel-feature .content-group .panel li a {
+	font-size:1em;
+}
+#panel-feature .content-group .panel-spacing {
+	margin:0 0 0 3px;
+}
+#panel-feature .content-group .standard .inner img {
+	margin: 0 8px;
+}

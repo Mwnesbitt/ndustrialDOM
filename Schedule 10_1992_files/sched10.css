@@ -1,0 +1,88 @@
+@charset "utf-8";
+#panel-feature .calendar-holder {
+	float:left;
+}
+#panel-feature table {
+	width:auto;
+	margin:0;
+	padding:3px;
+}
+#panel-feature table tr {
+	background:none;
+}
+#panel-feature table td {
+	border:1px solid #999;
+	padding:0;
+}
+#panel-feature table th {
+	border:1px solid #999;
+	background-color:#efefef;
+}
+#panel-feature table.calendar {
+	margin:10px 10px 20px 0;
+	border-collapse:collapse;
+}
+#panel-feature table.calendar td {
+}
+#panel-feature table.calendar th {
+	background-color:#efefef;
+	padding:2px 4px;
+	width:32px;
+	text-align:center;
+}
+#panel-feature table.day-count, 
+#panel-feature table.ytd-count {
+	margin:10px 10px 0 0;
+	border-collapse:collapse;
+	width: 175px;
+}
+#panel-feature table.day-count td, 
+#panel-feature table.ytd-count td {
+	width: 33%;
+	padding:3px;
+	text-align:center;
+}
+#panel-feature table.day-count{
+}
+#panel-feature table.ytd-count {
+}
+#panel-feature .rating {
+	text-align:center;
+	padding:5px;
+	margin:1px;
+}
+#panel-feature .day-number {
+	text-align:right;
+}
+#panel-feature .tomorrow {
+	padding:10px;
+}
+#panel-feature .legend-a {
+	background-color:#ffcc33;
+}
+#panel-feature .legend-b {
+	background-color:#cccccc;
+}
+#panel-feature .legend-c {
+	background-color:#6699cc;
+}
+#panel-feature .tomorrows-rating {
+}
+#panel-feature .form-year {
+}
+#panel-feature .month-list ul {
+	list-style:none;
+}
+#panel-feature .month-list ul li {
+	float:left;
+	padding:0 5px;
+}
+#panel-feature .month-list {
+	clear:both;
+	overflow:hidden;
+	zoom:1;
+}
+#panel-feature .legend-holder {
+	float:left;
+	width:55%;
+}

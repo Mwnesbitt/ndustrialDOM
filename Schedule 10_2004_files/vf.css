@@ -1,0 +1,134 @@
+﻿@charset "utf-8";
+/* 
+	vf.css
+	Provides style definitions for use by Teamsite Visual Formatter tool.
+
+	:THEME: screen/base
+	:AUTHOR: James Green
+	:CREATED: December 8, 2008
+	
+	:UPDATED:
+	JG 12/08/2008 - Initial setup.
+		
+	:NOTES:
+	Version 1.
+*/
+
+body {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#333;
+	background:url(backgrounds/page.jpg) repeat-x top left;
+	background-color:#C0B7AC; /* must come after background image to set properly in IE */
+	margin:0;
+	padding:0;
+	
+	font-size:100%;
+}
+h1 {
+	font-size:1.5em;
+	font-weight:normal;
+	color:#816f59;
+	margin:0 0 0 28px;
+}
+h2 {
+	color:#816f59;
+	font-size:1em;
+	font-weight:bold;
+}
+blockquote p {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+li {
+	font-size:.9em;
+}
+li li {
+	font-size:110%;
+}
+hr {
+	border-bottom:1px solid #f2f2f2;
+	border-style:solid none;
+	border-top:1px solid #cfcfcf;
+}
+table {
+	border:none;
+	font-weight:normal;	
+	font-size:.9em;
+	margin:10px 5px 20px 5px;
+	padding:0;
+	width:675px;
+}
+table th {
+	border:none;
+	font-weight:bold;
+	margin:0;
+	padding:5px 0 5px 5px;
+	text-align:left;
+	vertical-align:top;
+}
+table tr {
+	background:url(row-divider.png) repeat-x left bottom;
+}
+table td {
+	border:none;
+	background-color:transparent;
+	margin:0;
+	padding:5px;
+	text-align:left;
+	vertical-align:top;
+}
+table thead {
+	background:url(row-divider.png) repeat-x left top;
+}
+table thead th {
+	text-align:center;
+}
+table thead tr.row-header {
+	background:#e5e5e5;
+}
+table thead tr.title {
+	background:none;
+}
+table td.numeric {
+	text-align:right;
+}
+a {
+	color:#06f;
+	text-decoration:none;
+}
+a u {
+	text-decoration:none;
+}
+span.right span.photo-layout {
+	float:right;
+	margin:5px 0 0 10px;
+}
+span.left span.photo-layout {
+	float:left;
+	margin:5px 10px 0 0;
+}
+span.center span.photo-layout {	
+	display:block;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+span.photo-layout {
+	padding:0;
+}
+span.photo-layout img {
+	margin:0;
+	padding:0;
+}
+span.photo-layout span.caption {
+	clear:both;
+	color:#333;
+	display:block;
+	font-size:.85em;
+	line-height:120%;
+	margin:0 8px;
+	padding:3px 0 0 0;
+	width:100%;
+}
+.notice {
+	color:#999;
+}

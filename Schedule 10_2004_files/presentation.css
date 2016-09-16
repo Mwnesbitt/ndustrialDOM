@@ -1,0 +1,350 @@
+@charset "utf-8";
+/* 
+	presentation.css
+	Provides base page presentation for all of Dom.com.
+
+	:THEME: screen/base
+	:AUTHOR: James Green
+	:CREATED: June 10, 2008
+	
+	:UPDATED:
+	JG 06/10/2008 - Initial setup.
+	JG 08/19/2008 - Updated background images.
+	JG 08/20/2008 - Changes to incorporate new shadow images.
+	JG 08/21/2008 - Modified blockquote rule.
+					Added fade effect to left and right side of carousel.
+	JG 09/10/2008 - Modified position of sign in and register links to accommodate the Welcome message.
+					Fixed fade on line under sign in and register.
+					Corrected misspelling in Welcome message.
+	JG 10/13/2008 - Right margin of primary navigation adjusted for hover and drop down.
+	JG 10/16/2008 - Moved lock icon to icons folder.
+	JG 10/23/2008 - Font tweaks
+		
+	:NOTES:
+	Version 1.
+*/
+
+form {
+	margin:0;
+	padding:0;
+}
+/* Definition for text fields seen by Firefox, Opera, Safari. */
+input[type=text] {
+	border:1px solid #ccc;
+	background:url(forms/search-text-gradient-bg.png) repeat-x left 1px;
+	height:17px;
+	margin:0 10px 0 0;
+	padding:2px 4px;
+}
+
+.closed,
+.hidden {
+	display:none;
+}
+.text-field {
+	border:1px solid #ccc;
+	background:url(forms/search-text-gradient-bg.png) repeat-x left 1px;
+	height:17px;
+	margin:0 10px 0 0;
+	padding:2px 4px;
+}
+.no-divider {
+	background-image:none;
+}
+/* Used to indicate a password field or encrypted form. */
+.secure {
+	background:url(icons/lock.png) no-repeat;
+}
+.stock-price-plus {
+	color:#393;
+	font-weight:bold;
+}
+.stock-price-minus {
+	color:#c00;
+	font-weight:bold;
+}
+.stock-quote {
+	background:url(general-navigation-divider.png) no-repeat left center;
+}
+.publish-date {
+	margin:0;
+	padding:0;
+	margin:0 0 10px 0;
+}
+.drop-down {
+	text-decoration:none;
+	background:url(primary-menu-hover-bg.png) repeat-x top left;
+	background-color:#FFFFFF;
+}
+a:visited {
+	color:#06f;
+	text-decoration:none;
+}
+a:hover {
+	color:#06f;
+	text-decoration:underline;
+}
+
+p.publish-date {
+	color:#999;
+	font-size:.8em;
+}
+img#corporate-logo {
+	position:absolute;
+	top:14px;
+	left:30px;
+}
+img#ldc-logo {
+	position:absolute;
+	top:31px;
+	left:34px;
+}
+
+#canvas {
+	font-size:.85em;
+	background:url(backgrounds/page-border-top.jpg) no-repeat 10px 0;
+	padding:15px 10px 0;
+	margin:5px auto;	/* Centers canvas within the page body */
+	width:982px;
+}
+
+#band-copyright {
+	color:#666;
+	font-size:10px;
+	line-height:2.2em;
+	position:relative;
+	text-align:center;
+	margin:0 0 20px 0;
+	width:982px;
+}
+#panel-primary-menu {
+	float:right;
+	margin:0;
+	padding:0;
+}
+#band-site-identity {
+	position:relative;
+	height:97px;
+	background:url(backgrounds/site-identity.jpg) no-repeat top left;
+	width:982px;
+}
+#band-primary-navigation {
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	background:url(backgrounds/primary-navigation.jpg) no-repeat top left;
+	width:982px;
+}
+#panel-primary-navigation {
+	position:relative;
+	z-index:10;	
+}
+#band-site-identity form {
+	margin:0;
+	padding:0;
+	position:absolute;
+	top:50px;
+	right:10px;
+	width:275px;
+}
+#band-site-identity input {
+	position:relative;
+	top:5px;
+	float:left;
+}
+#band-primary-navigation ul {
+	list-style:none;
+	float:right;
+	overflow:hidden; /* clear float in non-IE browsers */
+	zoom:1;   /* IE 6 hack to clear li float */
+	margin:0 40px 0 0; /* mod 10/13/2008 */
+	padding:0;
+	height:28px;
+}
+#band-primary-navigation li {
+	display:block;
+	float:left;
+	margin:0;
+	padding:0;
+}
+#band-primary-navigation a {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	color:#666;
+	border:none;
+	display:block;
+	margin:0;
+	position:relative;
+	top:1px;	/* Move down one pixel to cover border of drop down menu. */
+	z-index:20; /* Move top level option higher than drop down. */
+	padding:7px 12px 8px 10px;
+}
+#band-primary-navigation a:hover {
+	text-decoration:none;
+	background:none;
+}
+#band-primary-navigation a.drop-down:hover {
+	text-decoration:none;
+	background:url(primary-menu-hover-bg.png) repeat-x top left;
+}
+#panel-primary-navigation img {
+	/* Note: Latest version no longer uses images in the drop down menus. JG 07/15/2008 */
+	/* Remove transparency on the menu image. */
+	opacity:1;                  /* CSS 3 supported */
+	filter: alpha(opacity=100); /* IE supported */ 
+	-moz-opacity: 1.00;	        /* Firefox supported */
+	position:absolute;
+	top:16px;;
+	right:16px;
+	z-index:30;
+}
+#panel-primary-navigation .drop-down-menu {
+	border:1px solid #d8d1c8;
+	background-color:#FFFFFF;
+	opacity:.95;               /* CSS 3 supported */
+	filter: alpha(opacity=95); /* IE supported */
+	-moz-opacity: 0.95;        /* Firefox supported */
+	position:absolute;
+	top:-1px;
+	right:30px;
+	padding:0 0 20px 0;
+	z-index:20;
+}
+#panel-primary-navigation .drop-down-menu.tips {
+	width:25%;
+}
+#panel-primary-navigation .drop-down-menu h2 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:100%;
+	color:#000;
+	word-spacing:.2em;
+	font-weight:100;
+}
+#panel-primary-navigation .drop-down-menu ul {
+	list-style:none;
+	float:left;
+	margin:10px;
+	padding:0;
+}
+#panel-primary-navigation .drop-down-menu li {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:80%;
+	color:#000;	
+	margin-bottom:9px;
+	font-size:.85em;
+}
+#panel-primary-navigation .drop-down-menu li.loner {
+	padding:10px 0 0 0;
+}
+#panel-primary-navigation .drop-down-menu li a {
+	color:#0066ff;
+	text-decoration:none;
+}
+
+#band-general-navigation {
+	position:relative;
+	height:50px;
+	width:982px;
+	clear:both;
+	background:url(../base/backgrounds/general-navigation.jpg) no-repeat top left;
+}
+#band-general-navigation p {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:100;
+	color:#666;
+	color:#666;
+	position:absolute;
+	top:9px;
+	left:570px;
+	margin:0;
+}
+#band-general-navigation ul {
+	margin:0 0 0 10px;
+	padding:14px 0 0 10px;
+	list-style:none;
+}
+#band-general-navigation li {
+	float:left;
+	padding:0 10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:100;
+	color:#666;
+	background:url(navigation-separator.png) no-repeat 0 3px; /* first number is horizontal pos., second number is vertical pos. */
+}
+#band-general-navigation li a, 
+#band-general-navigation li a:visited,
+#band-general-navigation li a:hover {
+	text-decoration:none;
+	color:#666;
+}
+#band-general-navigation li.no-divider {
+	background-image:none;
+}
+#band-general-navigation p strong {
+	word-spacing:10px;
+	margin:0 5px;
+}
+#band-general-navigation p.stock-quote {
+	padding:5px 0 5px 20px;
+	margin:0;
+}
+
+/* LDC Specific navigation componenet */
+#ldc-general-navigation {
+	font-weight:500;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#666;
+	top:0;
+	right:15px;
+	position:absolute;
+	width:150px;
+	height:23px;
+	background:url(top-nav-bottom-border.jpg) no-repeat -275px bottom;	
+}
+#ldc-general-navigation ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:absolute;
+	top:5px;
+	right:10px;
+}
+#ldc-general-navigation li {
+	list-style:none;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:500;
+	color:#666;
+	display:block;
+	float:left;
+	padding:0 0 0 20px;
+	margin:0;
+}
+#ldc-general-navigation li a, 
+#ldc-general-navigation li a:visited,
+#ldc-general-navigation li a:hover {
+	text-decoration:none;
+	color:#666;
+}
+img#rss-feed-button {
+	position:absolute;
+	top:8px;
+	right:27px;
+	background: url(general-navigation-divider.png) no-repeat left center;
+	padding: 0px 0px 0px 10px;
+}
+img#left-curtain {
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:20;
+}
+img#right-curtain {
+	position:absolute;
+	top:0;
+	right:0;
+	z-index:20;
+}

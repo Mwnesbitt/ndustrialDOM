@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* 
+	detail.css 
+	Print styles for detail content pages.
+
+	:THEME: print/    	
+	:AUTHOR: James Green
+	:CREATED: September 30, 2008
+	
+	:UPDATED:
+	JG 09/30/2008 - Initial setup.
+	
+	:NOTES:
+*/
+
+img,
+form,
+#band-primary-navigation,
+#panel-primary-navigation,
+#band-breadcrumb-navigation,
+#panel-menu,
+#band-general-navigation,
+#ldc-general-navigation {
+	display:none;
+}
+#band-content img {
+	display:block;
+}
+.print-friendly {
+	display:none;
+}
+
+.callout ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+.callout ul.contact-list li {
+	display:inline;
+	margin-right:15px;
+}
+
+#band-copyright {
+	margin:20px 0;
+	font-size:10px;
+	text-align:center;
+}
+#band-copyright img#corp-logo {
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	float:left;
+}
+#panel-faqs dd.closed {
+	display:block;
+}
